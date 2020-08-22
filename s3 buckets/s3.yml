@@ -1,0 +1,11 @@
+Description: Criar primeiro bucket no s3.
+
+Resources:
+  MeuBucketS3:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: meu-primeiro-bucket-sophia
+      BucketEncryption: # Criptografar o bucket é opcional, mas é uma boa prática.
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: AES256
